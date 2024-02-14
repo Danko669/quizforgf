@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrázek nebo video</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Úkol 4.</h1>
+        <h2>Dnes je to 547. co kráčíš po mém boku Lucinko a proto, jelikož můj život s tebou, jak bondón sladký jest, spočítej kolik jich v naší koupelně se nachází...</h2>
+        <img src="images\hadanka4.jpg" alt="Obrázek">
+        <form id="cisloForm">
+            <label for="cislo">Zadejte číslo:</label>
+            <input type="number" id="cislo" required>
+            <button type="submit">Odeslat</button>
+        </form>
+    </div>s
+    <script>
+        document.getElementById("cisloForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var ciloveCislo = 4;
+            var zadaneCislo = parseInt(document.getElementById("cislo").value);
+            if (zadaneCislo === ciloveCislo) {
+                window.location.href = "gratulka4.html";
+            } else {
+                alert("Zadali jste nesprávné číslo. Zkuste to znovu.");
+            }
+        });
+    </script>
+</body>
+</html>

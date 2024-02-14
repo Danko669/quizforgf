@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrázek nebo video</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Úkol 1.</h1>
+        <h2>Fešáka vedle tebe 69 hubičkami obdaruj, on odpověď tvou, ti sdělí...</h2>
+        <img src="images\hadanka1.png" alt="Obrázek">
+        <form id="cisloForm">
+            <label for="cislo">Zadejte číslo:</label>
+            <input type="number" id="cislo" required>
+            <button type="submit">Odeslat</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("cisloForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var ciloveCislo = 1;
+            var zadaneCislo = parseInt(document.getElementById("cislo").value);
+            if (zadaneCislo === ciloveCislo) {
+                window.location.href = "gratulka1.html";
+            } else {
+                alert("Zadali jste nesprávné číslo. Zkuste to znovu.");
+            }
+        });
+    </script>
+</body>
+</html>
